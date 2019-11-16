@@ -65,16 +65,6 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/buttons_title"
-        android:key="buttons_category">
-        <SwitchPreference
-            android:key="hwk"
-            android:summary="@string/swap_back_recents_summary"
-            android:title="@string/swap_back_recents_title"
-            android:persistent="true" />
-    </PreferenceCategory>
-
-    <PreferenceCategory
         android:key="graphics"
         android:title="@string/graphics_title">
         <!--<SwitchPreference

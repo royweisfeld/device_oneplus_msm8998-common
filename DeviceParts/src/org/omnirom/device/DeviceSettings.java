@@ -53,7 +53,6 @@ public class DeviceSettings extends PreferenceFragment implements
 
     public static final String KEY_SRGB_SWITCH = "srgb";
     public static final String KEY_HBM_SWITCH = "hbm";
-    public static final String KEY_HWK_SWITCH = "hwk";
     public static final String KEY_PROXI_SWITCH = "proxi";
     public static final String KEY_DCI_SWITCH = "dci";
     public static final String KEY_NIGHT_SWITCH = "night";
@@ -67,7 +66,6 @@ public class DeviceSettings extends PreferenceFragment implements
     private ListPreference mSliderModeCenter;
     private ListPreference mSliderModeBottom;
     private static TwoStatePreference mHBMModeSwitch;
-    private static TwoStatePreference mHWKSwitch;
     private PreferenceCategory buttonCategory;
     private static Context mContext;
 
@@ -106,14 +104,6 @@ public class DeviceSettings extends PreferenceFragment implements
         mHBMModeSwitch.setEnabled(HBMModeSwitch.isSupported());
         mHBMModeSwitch.setChecked(HBMModeSwitch.isCurrentlyEnabled(this.getContext()));
         mHBMModeSwitch.setOnPreferenceChangeListener(new HBMModeSwitch());
-
-        mHWKSwitch = (TwoStatePreference) findPreference(KEY_HWK_SWITCH);
-        if (!sIsOnePlus5t) {
-            mHWKSwitch.setEnabled(HWKSwitch.isSupported());
-            mHWKSwitch.setOnPreferenceChangeListener(new HWKSwitch());
-        } else {
-            mHWKSwitch.setVisible(false);
-        }
     }
 
     @Override
