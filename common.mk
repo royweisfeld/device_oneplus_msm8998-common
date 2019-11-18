@@ -198,6 +198,7 @@ PRODUCT_PACKAGES += \
 
 # Device
 PRODUCT_PACKAGES += \
+    Dirac \
     DeviceParts
 
 # DRM
